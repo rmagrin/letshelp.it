@@ -13,7 +13,7 @@
     <![endif]-->
   </head>
   <body id="body_tag" lang="<%= I18n.locale.to_s %>">
-	
+
 	<div id="fb-root"></div>
 	<script>(function(d, s, id) {
 	  var js, fjs = d.getElementsByTagName(s)[0];
@@ -22,7 +22,7 @@
 	  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
 	  fjs.parentNode.insertBefore(js, fjs);
 	}(document, 'script', 'facebook-jssdk'));</script>
-	
+
     <header>
       <nav>
         <div class="wrapper">
@@ -39,7 +39,7 @@
           <div class="clear"></div>
         </div>
       </nav>
-      
+
       <div class="wrapper">
         <h1 id="logo"><a href="/"></a></h1>
           <div class="slogan"><%= t("subtitle") %></div>
@@ -74,7 +74,7 @@
       </div>
 
       <%= "<h4 class=\"successfulUpdated\">#{flash[:notice]}</h4>".html_safe if !flash[:notice].nil? %>
-      <%= yield %>
+      <%= content_for?(:content) ? yield(:content) : yield %>
 
     </section>
 

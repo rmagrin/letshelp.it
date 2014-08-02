@@ -1,12 +1,12 @@
 class OrganizationsController < ApplicationController
 
   before_filter :find_organization, :only => [:show, :edit, :update, :destroy]
-  
+
 private
   def find_organization
     @organization = Organization.find(params[:id])
   end
-  
+
 public
   # GET /organizations
   # GET /organizations.xml
@@ -30,6 +30,7 @@ public
 
   # GET /organizations/1/edit
   def edit
+    render :layout => "layouts/organization_edit"
   end
 
   def ajax_edit
@@ -70,7 +71,7 @@ public
         flash[:notice] = t("organization.success_updated")
         format.html { redirect_to(@organization) }
       else
-        format.html { render :layout => "main", :partial => "form", :locals => { :action => "Update" } } 
+        format.html { render :layout => "layouts/organization_edit" }
       end
     end
   end
@@ -84,14 +85,14 @@ public
       format.html { redirect_to(organizations_url) }
     end
   end
-  
+
   def search
     tag_ids = params[:tag_ids]
     name_slug = "%#{Organization.slug_name(params[:q])}%"
     city_slug = "%#{Organization.slug_city(params[:q])}%"
     @organizations = Organization.all(:conditions => ["name_slug like ? OR city_slug like ?", name_slug , city_slug ] )
     @organizations &= Tag.find(tag_ids).inject([]) { |a,t| a + t.organizations } if tag_ids && !tag_ids.empty?
-    
+
     respond_to do |format|
       format.html { render :action => :index }
     end

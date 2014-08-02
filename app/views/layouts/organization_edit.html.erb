@@ -1,0 +1,12 @@
+<% content_for :content do %>
+  <div class="wrapper">
+    <div class="editOrg">
+      <h3><%=t("organization.update", :organization => @organization.name)%></h3>
+      <div id="edit_form">
+        <%= yield %>
+      </div>
+    </div>
+    <div class="clear"></div>
+  </div>
+<% end %>
+<%= render :file => "layouts/application" %>
