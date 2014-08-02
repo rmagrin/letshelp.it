@@ -1,6 +1,6 @@
 class Organization < ActiveRecord::Base
 
-  extend Random
+  extend DbRandom
 
   has_friendly_id :name, :use_slug => true, :cache_column => 'name_slug', :approximate_ascii => true
 
@@ -30,4 +30,3 @@ class Organization < ActiveRecord::Base
   end
 
 end
-
