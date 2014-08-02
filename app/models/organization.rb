@@ -1,8 +1,9 @@
 class Organization < ActiveRecord::Base
 
   extend DbRandom
+  extend FriendlyId
 
-  has_friendly_id :name, :use_slug => true, :cache_column => 'name_slug', :approximate_ascii => true
+  friendly_id :name, use: :slugged, :slug_column => 'name_slug'
 
   validates_presence_of :name, :contact, :city, :country, :password,  :announcer, :email
   validates_format_of :email, :with  => /[\w+-][\w.+-]*@\w+\.\w+/, :allow_blank => true
@@ -13,6 +14,14 @@ class Organization < ActiveRecord::Base
   def city=(name)
     write_attribute(:city, name)
     write_attribute(:city_slug, Organization.slug_city(name)) if name
+  end
+
+  def should_generate_new_friendly_id?
+    name_changed?
+  end
+
+  def normalize_friendly_id(value)
+    Organization.slug_name(value)
   end
 
   def self.slug_name(str)

@@ -30,7 +30,7 @@ GEM
       activesupport (= 3.0.20)
     activesupport (3.0.20)
     arel (2.0.10)
-    babosa (0.3.4)
+    babosa (0.3.11)
     builder (2.1.2)
     capybara (2.4.1)
       mime-types (>= 1.16)
@@ -51,8 +51,8 @@ GEM
       railties (>= 3.0.0)
     ffi (1.9.3)
     forgery (0.6.0)
-    friendly_id (3.2.1.1)
-      babosa (~> 0.3.0)
+    friendly_id (4.0.10.1)
+      activerecord (>= 3.0, < 4.0)
     headless (1.0.2)
     i18n (0.5.3)
     json (1.8.1)
@@ -143,13 +143,13 @@ PLATFORMS
 
 DEPENDENCIES
   RedCloth (~> 4.2.9)
-  babosa (= 0.3.4)
+  babosa (~> 0.3.11)
   capybara
   dynamic_form (~> 1.1.4)
   factory_girl (~> 2.6.4)
   factory_girl_rails (~> 1.7.0)
   forgery
-  friendly_id (= 3.2.1.1)
+  friendly_id (~> 4.0.10)
   headless
   pg
   rails (~> 3.0.20)
