@@ -7,7 +7,7 @@ gem 'friendly_id', '3.2.1.1'
 gem 'babosa', '0.3.4'
 gem 'dynamic_form', '~> 1.1.4'
 gem 'RedCloth', '~> 4.2.9'
-gem 'truncate_html', '0.5.1'
+gem 'truncate_html', '~> 0.9.2'
 
 group :production do
   gem 'pg'
