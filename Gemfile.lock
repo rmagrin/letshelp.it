@@ -41,6 +41,7 @@ GEM
     childprocess (0.5.3)
       ffi (~> 1.0, >= 1.0.11)
     diff-lcs (1.2.5)
+    dynamic_form (1.1.4)
     erubis (2.6.6)
       abstract (>= 1.0.0)
     factory_girl (2.6.4)
@@ -144,6 +145,7 @@ DEPENDENCIES
   RedCloth (~> 4.2.9)
   babosa (= 0.3.4)
   capybara
+  dynamic_form (~> 1.1.4)
   factory_girl (~> 2.6.4)
   factory_girl_rails (~> 1.7.0)
   forgery
