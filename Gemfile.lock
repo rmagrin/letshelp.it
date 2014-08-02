@@ -1,7 +1,7 @@
 GEM
   remote: http://rubygems.org/
   specs:
-    RedCloth (4.2.3)
+    RedCloth (4.2.9)
     abstract (1.0.0)
     actionmailer (3.0.20)
       actionpack (= 3.0.20)
@@ -91,7 +91,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  RedCloth (= 4.2.3)
+  RedCloth (~> 4.2.9)
   babosa (= 0.3.4)
   friendly_id (= 3.2.1.1)
   pg
