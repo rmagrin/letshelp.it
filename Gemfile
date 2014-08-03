@@ -8,6 +8,7 @@ gem 'friendly_id', '~> 4.0.10'
 gem 'dynamic_form', '~> 1.1.4'
 gem 'RedCloth', '~> 4.2.9'
 gem 'truncate_html', '~> 0.9.2'
+gem 'unicorn'
 
 group :production do
   gem 'pg'
