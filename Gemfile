@@ -1,5 +1,4 @@
 source 'http://rubygems.org'
-source 'http://gems.github.com'
 
 gem 'rake'
 gem 'rails', '~>3.0.19'
@@ -10,7 +9,6 @@ gem 'RedCloth', '4.2.3'
 gem 'truncate_html', '0.5.1'
 
 group :test do
-  # gem 'thoughtbot-shoulda', :require => 'shoulda/rails'
   gem 'shoulda', '~> 3.0.1'
   gem 'test-unit'
   gem 'rcov'
