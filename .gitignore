@@ -16,3 +16,4 @@ specifications/*
 doc
 *~
 .vagrant
+.env
