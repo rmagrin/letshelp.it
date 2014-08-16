@@ -97,7 +97,7 @@ DEPENDENCIES
   babosa (= 0.3.4)
   friendly_id (= 3.2.1.1)
   pg
-  rails (~> 3.0.19)
+  rails (~> 3.0.20)
   rails_12factor
   rake
   rcov

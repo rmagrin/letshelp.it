@@ -2,7 +2,7 @@ source 'http://rubygems.org'
 ruby '1.8.7'
 
 gem 'rake'
-gem 'rails', '~>3.0.19'
+gem 'rails', '~>3.0.20'
 gem 'friendly_id', '3.2.1.1'
 gem 'babosa', '0.3.4'
 gem 'RedCloth', '4.2.3'

@@ -5,9 +5,9 @@ Connect groups looking for NGO's to donate food, clothing, or even do volunteer 
 
 Requirements
 
-- Ruby 1.8.7 EE (we recommend RVM, from http://rvm.beginrescueend.com/)
-- Rails 3.0.19 (gem install -v=3.0.7 rails)
-- sqlite3-ruby (gem install sqlite3-ruby)
+- Ruby 1.8.7 (we recommend RVM, from http://rvm.beginrescueend.com/)
+- Bundler (gem install bundle)
+- sqlite3 (gem install sqlite3)
 
 
 About Let's Help It - This is the idea behind it
@@ -28,8 +28,8 @@ http://github.com/thoughtworks/letshelp.it
 Developers who would like to contribute to the project should join the discussion group:
 http://groups.google.com/group/letshelpit-dev
 
-We also have channels on Twitter and User Voice (a free forum/feedback service): 
-Twitter: http://www.twitter.com/letshelpit 
+We also have channels on Twitter and User Voice (a free forum/feedback service):
+Twitter: http://www.twitter.com/letshelpit
 User Voice: http://letshelpit.uservoice.com/forums/72267-general
 
 Let's Help It!
