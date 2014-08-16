@@ -1,7 +1,14 @@
 #!/usr/bin/env bash
 
 function update_apt_repositories {
+  echo "Adding new apt repositories..."
+  # add heroku repository to apt
+  echo "deb http://toolbelt.heroku.com/ubuntu ./" > /etc/apt/sources.list.d/heroku.list
+  # install heroku's release key for package verification
+  wget -O- https://toolbelt.heroku.com/apt/release.key | apt-key add -
+  # Update apt
   apt-get update -y
+  echo "Done adding new apt repositories."
 }
 
 function install_basic_packages {
@@ -22,7 +29,12 @@ function install_ruby {
   echo "Done installing ruby."
 }
 
+function install_heroku_toolbelt {
+  apt-get install -y postgresql-client heroku-toolbelt
+}
+
 update_apt_repositories
 install_basic_packages
 install_requirements
 install_ruby
+install_heroku_toolbelt
