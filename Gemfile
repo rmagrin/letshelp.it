@@ -20,6 +20,4 @@ end
 group :test do
   gem 'shoulda', '~> 3.0.1'
   gem 'test-unit'
-  gem 'rcov'
-  gem 'ruby-prof', '~> 0.11.3'
 end
