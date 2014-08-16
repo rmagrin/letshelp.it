@@ -2,7 +2,6 @@
 # Likewise, all the methods added will be available for all controllers.
 
 class ApplicationController < ActionController::Base
-  layout "main"
   helper :all # include all helpers, all the time
   protect_from_forgery # See ActionController::RequestForgeryProtection for details
   before_filter :set_locale
@@ -27,7 +26,7 @@ class ApplicationController < ActionController::Base
     def get_locale_from_params_if_available(locale_verifier)
       if self.action_name == 'index' && params[:locale]
         locale_verifier.find_compatible_locale(params[:locale])
-      end      
+      end
     end
 
     def get_locale_from_request(locale_verifier)
