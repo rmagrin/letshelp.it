@@ -23,8 +23,7 @@ function install_requirements {
 
 function install_ruby {
   echo "Installing ruby..."
-  apt-get remove -y ruby1.9 ruby1.9.1
-  apt-get install -y ruby1.8 ruby1.8-dev rubygems
+  apt-get install -y ruby1.9.3
   gem install bundler
   echo "Done installing ruby."
 }
