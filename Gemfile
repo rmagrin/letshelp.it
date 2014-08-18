@@ -18,6 +18,7 @@ group :development, :test do
 end
 
 group :test do
-  gem 'shoulda', '~> 3.0.1'
+  gem 'shoulda', '~> 3.5.0'
+  gem 'shoulda-kept-assign-to'
   gem 'test-unit'
 end
