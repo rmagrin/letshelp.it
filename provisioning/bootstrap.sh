@@ -32,8 +32,22 @@ function install_heroku_toolbelt {
   apt-get install -y postgresql-client heroku-toolbelt
 }
 
+function install_firefox {
+  apt-get install -y xvfb firefox
+}
+
+function setup_to_run_ui_tests {
+  if [ "$GUI" == "headless" ]; then
+    echo "GUI is already set to headless"
+  else
+    echo "export GUI=\"headless\"" >> /home/vagrant/.profile
+  fi
+}
+
 update_apt_repositories
 install_basic_packages
 install_requirements
 install_ruby
 install_heroku_toolbelt
+install_firefox
+setup_to_run_ui_tests

@@ -52,6 +52,7 @@ GEM
     forgery (0.6.0)
     friendly_id (3.2.1.1)
       babosa (~> 0.3.0)
+    headless (1.0.2)
     i18n (0.5.3)
     json (1.8.1)
     mail (2.2.20)
@@ -145,6 +146,7 @@ DEPENDENCIES
   factory_girl_rails (~> 1.7.0)
   forgery
   friendly_id (= 3.2.1.1)
+  headless
   pg
   rails (~> 3.0.20)
   rails_12factor

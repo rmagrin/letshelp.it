@@ -25,6 +25,7 @@ group :test do
   gem 'factory_girl', '~> 2.6.4'
   gem 'factory_girl_rails', '~> 1.7.0'
   gem 'selenium-webdriver'
+  gem 'headless'
   gem 'capybara'
   gem 'forgery'
 end
