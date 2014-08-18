@@ -226,13 +226,6 @@
         }
       },
       :errors => {
-        :template => {
-          :header => {
-            :one => "Não foi possível gravar o(a) %{model}: 1 erro", 
-            :other => "Não foi possível gravar o(a) %{model}: %{count} erros."
-          }, 
-          :body => "Por favor, verifique o(s) seguinte(s) campo(s):"
-        }, 
         :messages => {
           :inclusion => "não está incluído na lista", 
           :exclusion => "não está disponível", 
@@ -255,7 +248,25 @@
           :odd => "deve ser ímpar", 
           :even => "deve ser par", 
           :record_invalid => "A validação falhou: %{errors}"
+        },
+        :models => {
+          :organization => {
+            :attributes => {
+              :email => {
+                :format => "is invalid"
+              }            
+            }
+          }
         }
+      }
+    },
+    :errors => {
+      :template => {
+        :header => {
+          :one => "Não foi possível gravar o(a) %{model}: 1 erro",
+          :other => "Não foi possível gravar o(a) %{model}: %{count} erros."
+        },
+        :body => "Por favor, verifique o(s) seguinte(s) campo(s):"
       }
     }
   }

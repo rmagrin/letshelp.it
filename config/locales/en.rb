@@ -125,6 +125,15 @@
           :accepted => "must be accepted", 
           :not_a_number => "is not a number", 
           :inclusion => "is not included in the list"
+        },
+        :models => {
+          :organization => {
+            :attributes => {
+              :email => {
+                :format => "is invalid"
+              }
+            }
+          }
         }
       }
     }, 
