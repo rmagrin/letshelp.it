@@ -14,6 +14,7 @@ gems/*
 specifications/*
 .rvmrc
 doc
+doc/*
 *~
 .vagrant
 .env
