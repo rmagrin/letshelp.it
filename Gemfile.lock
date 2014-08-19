@@ -132,7 +132,7 @@ GEM
       polyglot
       polyglot (>= 0.3.1)
     truncate_html (0.5.1)
-    tzinfo (0.3.39)
+    tzinfo (0.3.41)
     websocket (1.0.7)
     xpath (2.0.0)
       nokogiri (~> 1.3)
