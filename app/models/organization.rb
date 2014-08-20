@@ -16,10 +16,6 @@ class Organization < ActiveRecord::Base
     write_attribute(:city_slug, Organization.slug_city(name)) if name
   end
 
-  def should_generate_new_friendly_id?
-    name_changed?
-  end
-
   def normalize_friendly_id(value)
     Organization.slug_name(value)
   end

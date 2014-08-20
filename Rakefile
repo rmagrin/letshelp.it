@@ -7,3 +7,10 @@ require File.expand_path('../config/application', __FILE__)
 LetshelpIt::Application.load_tasks
 
 task 'test:all' => [ :test, :spec ]
+
+namespace :db do
+  desc "Recreate slugs"
+  task :recreate_slugs => :environment do
+    Organization.find_each(&:save)
+  end
+end
