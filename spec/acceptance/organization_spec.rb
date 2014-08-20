@@ -98,6 +98,7 @@ describe 'Editing organization' do
     click_button 'Validate'
     fill_in 'organization[city]', :with => 'Tangamandapio'
     find_field 'organization[city]'
+    fill_in 'organization[password]', :with => 'password'
     click_button 'organization_submit'
     page.should have_xpath "//h4[@class='successfulUpdated']"
   end

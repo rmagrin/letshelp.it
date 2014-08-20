@@ -2,7 +2,7 @@ source 'http://rubygems.org'
 ruby '1.9.3'
 
 gem 'rake'
-gem 'rails', '~>3.0.20'
+gem 'rails', '~>3.2.19'
 gem 'babosa', '~> 0.3.11'
 gem 'friendly_id', '~> 4.0.10'
 gem 'dynamic_form', '~> 1.1.4'
