@@ -1,6 +1,6 @@
 class OrganizationsController < ApplicationController
 
-  before_filter :find_organization, :only => [:show, :edit, :update, :destroy]
+  before_filter :find_organization, :only => [:show, :edit, :ajax_edit, :update, :destroy]
 
 private
   def find_organization
@@ -17,7 +17,6 @@ public
   # GET /organizations/1
   # GET /organizations/1.xml
   def show
-    @organization = Organization.find(params[:id])
     @tags = Tag.all
   end
 
@@ -34,7 +33,6 @@ public
   end
 
   def ajax_edit
-    @organization = Organization.find(params[:id])
     respond_to do |format|
       if(@organization.password == params[:password]) then
         format.js { render :partial => "organizations/form" , :locals => { :action => "Update" } }
