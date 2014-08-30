@@ -1,4 +1,8 @@
-@font-face { font-family: Harabara; src: url('/fonts/Harabara.ttf'); } 
+//= depend_on_asset "logo.png"
+//= depend_on_asset "arrow.gif"
+//= depend_on_asset "Harabara.ttf"
+
+@font-face { font-family: Harabara; src: url(<%= asset_path('Harabara.ttf') %>); }
 
 html, body, * {
   list-style: none;
@@ -50,7 +54,7 @@ a:hover {
 }
 
 .right {
-  margin-right: 0 !important;  
+  margin-right: 0 !important;
 }
 
 .left {
@@ -88,14 +92,14 @@ header nav .wrapper {
 }
 
 header .wrapper h1#logo {
-  width: 195px; 
+  width: 195px;
   height: 160px;
   position: relative;
   float: left;
 }
 
 header .wrapper h1#logo a {
-  background: url(/images/logo.png);
+  background: url(<%= asset_path('logo.png') %>);
   position: absolute;
   width: 100%;
   height: 100%;
@@ -186,7 +190,7 @@ h3 {
 h4 {
   margin-bottom: 20px;
   font-style: italic;
-  background: url(/images/arrow.gif) no-repeat left center;
+  background: url(<%= asset_path('arrow.gif') %>) no-repeat left center;
   padding-left: 15px;
 }
 
@@ -237,7 +241,7 @@ input#search:hover {
 
 /* featuredOrg */
 
-.featuredOrg .bucket, 
+.featuredOrg .bucket,
 .orgDescription,
 .register,
 .editOrg,
@@ -326,23 +330,23 @@ small.free {
 .register,
 .editOrg,
 .aboutUs {
-  width: 900px;  
+  width: 900px;
   position: relative;
   padding: 20px;
 }
 
-.register h3, 
+.register h3,
 .orgDescription h3,
 .editOrg h3,
 .aboutUs h3 {
   margin: -20px -20px 40px -20px;
   padding: 20px;
   background: #F5F5F5;
-  border-bottom: 3px solid #F9F9F9;  
+  border-bottom: 3px solid #F9F9F9;
 }
 
 .orgDescription h3 div {
-  background: url(/images/arrow.gif) no-repeat left center;
+  background: url(<%= asset_path('arrow.gif') %>) no-repeat left center;
   padding-left: 15px;
   font-family: 'Trebuchet MS';
   font-size: 1em;
@@ -353,7 +357,7 @@ small.free {
 
 .orgDescription a.edit {
   color: #74557F;
-} 
+}
 .orgDescription a.edit:hover {
   background: #74557F;
   color: white;
@@ -399,7 +403,7 @@ textarea {
   font-style: italic;
 }
 
-.orgInfo, 
+.orgInfo,
 .announcerInfo {
   width: 420px;
 }
@@ -441,7 +445,7 @@ input#organization_submit:hover {
   margin-bottom: 10px;
 }
 
-.waysOfContact strong, 
+.waysOfContact strong,
 .tags strong,
 .needs strong {
   font-size: 1.2em;
