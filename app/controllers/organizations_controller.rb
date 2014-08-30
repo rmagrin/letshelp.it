@@ -7,6 +7,12 @@ private
     @organization = Organization.find(params[:id])
   end
 
+  def organization_params
+    params
+      .require(:organization)
+      .permit(:name, :contact, :city, :country, :needs, :password,  :announcer, :email, { :tag_ids => [] })
+  end
+
 public
   # GET /organizations
   # GET /organizations.xml
@@ -46,7 +52,7 @@ public
   # POST /organizations.xml
   def create
     params[:organization][:tag_ids] ||= []
-    @organization = Organization.new(params[:organization])
+    @organization = Organization.new(organization_params)
 
     respond_to do |format|
       if @organization.save
@@ -65,7 +71,7 @@ public
     params[:organization][:tag_ids] ||= []
 
     respond_to do |format|
-      if @organization.update_attributes(params[:organization])
+      if @organization.update_attributes(organization_params)
         flash[:notice] = t("organization.success_updated")
         format.html { redirect_to(@organization) }
       else
