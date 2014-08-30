@@ -2,6 +2,10 @@
 
 function update_apt_repositories {
   echo "Adding new apt repositories..."
+  apt-get update -y
+  apt-get install -y python-software-properties
+  # Ruby repository
+  add-apt-repository -y ppa:brightbox/ruby-ng
   # add heroku repository to apt
   echo "deb http://toolbelt.heroku.com/ubuntu ./" > /etc/apt/sources.list.d/heroku.list
   # install heroku's release key for package verification
@@ -23,7 +27,7 @@ function install_requirements {
 
 function install_ruby {
   echo "Installing ruby..."
-  apt-get install -y ruby1.9.3
+  apt-get install -y ruby2.1 ruby2.1-dev
   gem install bundler
   echo "Done installing ruby."
 }
