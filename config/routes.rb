@@ -1,15 +1,15 @@
 LetshelpIt::Application.routes.draw do
 
-  # The priority is based upon order of creation:
-  # first created -> highest priority.
+  # The priority is based upon order of creation: first created -> highest priority.
+  # See how all your routes lay out with "rake routes".
 
-  match '/' => 'home#index'
-  match '/about' => 'home#about', :as => :about, :via => 'get'
+  root 'home#index'
+  get '/about' => 'home#about', :as => :about
 
-  match '/organizations/search' => 'organizations#search', :as => :search, :via => 'get'
-  match '/organizations/ajax_edit' => 'organizations#ajax_edit', :as => :ajax_edit
+  get '/organizations/search' => 'organizations#search', :as => :search
+  get '/organizations/ajax_edit' => 'organizations#ajax_edit', :as => :ajax_edit
   resources :organizations
 
-  match '/:id' => 'organizations#show', :as => :organization_shortcut
-  
+  get '/:id' => 'organizations#show', :as => :organization_shortcut
+
 end
