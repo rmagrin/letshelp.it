@@ -8,7 +8,6 @@ tmp/*
 .rvmrc
 *.sqlite3
 *.swp
-bin/*
 cache/*
 gems/*
 specifications/*
