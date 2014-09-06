@@ -24,8 +24,8 @@ group :test do
   gem 'shoulda', '~> 3.5.0', require: false
   gem 'shoulda-kept-assign-to', require: false
   gem 'test-unit'
-  gem 'factory_girl', '~> 3.0'
-  gem 'factory_girl_rails', '~> 2.0'
+  gem 'factory_girl', '~> 3.6'
+  gem 'factory_girl_rails', '~> 3.6'
   gem 'selenium-webdriver'
   gem 'headless'
   gem 'capybara'
