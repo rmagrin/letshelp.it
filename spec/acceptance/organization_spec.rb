@@ -1,6 +1,6 @@
 # coding: UTF-8
 
-require 'spec_helper'
+require 'ui_helper'
 
 describe 'Submitting organization' do
   before { visit "/organizations/new" }

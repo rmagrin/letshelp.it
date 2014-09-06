@@ -17,7 +17,7 @@ end
 
 group :development, :test do
   gem 'sqlite3', '~>1.3.4'
-  gem 'rspec-rails', '~> 2.4'
+  gem 'rspec-rails', '~> 3.1.0'
 end
 
 group :test do

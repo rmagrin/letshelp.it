@@ -1,6 +1,6 @@
 # coding: UTF-8
 
-require 'spec_helper'
+require 'rails_helper'
 
 describe Organization do
   before(:each) do

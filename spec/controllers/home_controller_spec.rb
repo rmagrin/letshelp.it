@@ -1,6 +1,6 @@
 # coding: UTF-8
 
-require 'spec_helper'
+require 'rails_helper'
 
 describe HomeController, :type => :controller do
   it 'should have an index page' do
