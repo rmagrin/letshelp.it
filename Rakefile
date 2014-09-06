@@ -4,7 +4,7 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-LetshelpIt::Application.load_tasks
+Rails.application.load_tasks
 
 task 'test:all' => [ :test, :spec ]
 
