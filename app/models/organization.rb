@@ -29,7 +29,7 @@ class Organization < ActiveRecord::Base
   end
 
   def self.get_random_list(limit)
-    organizations = Organization.all(:select => :id, :order => db_random, :limit => limit)
+    organizations = Organization.select(:id).order(db_random).limit(limit).load
     organizations.each { |u| u.reload}
   end
 

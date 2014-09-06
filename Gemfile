@@ -9,7 +9,6 @@ gem 'dynamic_form', '~> 1.1.4'
 gem 'RedCloth', '~> 4.2.9'
 gem 'truncate_html', '~> 0.9.2'
 gem 'unicorn'
-gem 'activerecord-deprecated_finders', require: 'active_record/deprecated_finders'
 
 group :production do
   gem 'pg'

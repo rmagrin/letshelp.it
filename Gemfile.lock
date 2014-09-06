@@ -150,7 +150,6 @@ PLATFORMS
 
 DEPENDENCIES
   RedCloth (~> 4.2.9)
-  activerecord-deprecated_finders
   babosa (~> 0.3.11)
   capybara
   dynamic_form (~> 1.1.4)
