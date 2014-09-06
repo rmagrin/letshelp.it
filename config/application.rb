@@ -23,8 +23,5 @@ module LetshelpIt
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
-
-    # Assets pipeline
-    config.assets.precompile += %w( jquery.js html5.js uservoice.js analytics.js )
   end
 end
