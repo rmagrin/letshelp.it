@@ -25,7 +25,6 @@ module LetshelpIt
     # config.i18n.default_locale = :de
 
     # Assets pipeline
-    config.assets.initialize_on_precompile = false
     config.assets.precompile += %w( jquery.js html5.js uservoice.js analytics.js )
   end
 end
