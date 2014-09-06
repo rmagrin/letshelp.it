@@ -17,11 +17,11 @@ describe OrganizationsController do
   end
 
   it 'should create an organization' do
-    expect {post :create, :organization => Factory.attributes_for(:organization)}.to change(Organization, :count).by(1)
+    expect {post :create, :organization => FactoryGirl.attributes_for(:organization)}.to change(Organization, :count).by(1)
     response.should redirect_to(Organization.last)
   end
   context 'when manipulating organizations' do
-    let(:organization) {Factory :organization}
+    let(:organization) { FactoryGirl.create(:organization)}
 
     it 'should show an organization' do
       get :show, :id => organization
@@ -50,7 +50,7 @@ describe OrganizationsController do
   end
 
   context 'when searching for organizations' do
-    let(:organization) {Factory :organization}
+    let(:organization) { FactoryGirl.create(:organization) }
 
     it 'should return organizations based on its name' do
       get :search, :q => organization.name
@@ -63,14 +63,14 @@ describe OrganizationsController do
     end
 
     it 'should return organizations based on tags' do
-      tag = Factory :tag
+      tag = FactoryGirl.create(:tag)
       organization.tags << tag
       get :search, :tag_ids => [tag]
       assigns(:organizations).should include(organization)
     end
 
     it 'should not return an organization without the tag being searched' do
-      tag = Factory :tag
+      tag = FactoryGirl.create(:tag)
       get :search, :tag_ids => [tag]
       assigns(:organizations).should_not include(organization)
     end

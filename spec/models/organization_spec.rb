@@ -4,7 +4,7 @@ require 'spec_helper'
 
 describe Organization do
   before(:each) do
-    @organization = Factory :organization
+    @organization = FactoryGirl.create(:organization)
   end
 
   it {should have_and_belong_to_many :tags}
@@ -34,7 +34,7 @@ describe Organization do
   context 'randomness' do
     it 'should retrieve a random number of organizations' do
       number = rand(10)
-      (number*2).times {Factory :organization }
+      (number*2).times { FactoryGirl.create(:organization) }
 
       Organization.get_random_list(number).count.should == number
     end
