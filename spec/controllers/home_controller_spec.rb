@@ -2,7 +2,7 @@
 
 require 'spec_helper'
 
-describe HomeController do
+describe HomeController, :type => :controller do
   it 'should have an index page' do
     get :index
     response.should be_success

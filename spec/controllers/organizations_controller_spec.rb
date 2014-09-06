@@ -2,7 +2,7 @@
 
 require 'spec_helper'
 
-describe OrganizationsController do
+describe OrganizationsController, :type => :controller do
 
   it 'should have an index page' do
     get :index
