@@ -42,10 +42,10 @@ GEM
     diff-lcs (1.2.5)
     dynamic_form (1.1.4)
     erubis (2.7.0)
-    factory_girl (3.6.2)
+    factory_girl (4.4.0)
       activesupport (>= 3.0.0)
-    factory_girl_rails (3.6.0)
-      factory_girl (~> 3.6.0)
+    factory_girl_rails (4.4.1)
+      factory_girl (~> 4.4.0)
       railties (>= 3.0.0)
     ffi (1.9.3)
     forgery (0.6.0)
@@ -159,8 +159,8 @@ DEPENDENCIES
   babosa (~> 0.3.11)
   capybara
   dynamic_form (~> 1.1.4)
-  factory_girl (~> 3.6)
-  factory_girl_rails (~> 3.6)
+  factory_girl (~> 4.4.0)
+  factory_girl_rails (~> 4.4.1)
   forgery
   friendly_id (~> 5.0.4)
   headless
