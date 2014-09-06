@@ -21,13 +21,13 @@ describe Organization do
 
   context 'slugs' do
     it 'should have appropriate slugs' do
-      @organization.city_slug.should == Organization.slug_city(@organization.city)
-      @organization.name_slug.should == Organization.slug_name(@organization.name)
+      expect(@organization.city_slug).to eq(Organization.slug_city(@organization.city))
+      expect(@organization.name_slug).to eq(Organization.slug_name(@organization.name))
     end
 
     it 'should create slugs automatically' do
       @organization.city = "Jaraguá do Sul"
-      @organization.city_slug.should == "jaragua do sul"
+      expect(@organization.city_slug).to eq("jaragua do sul")
     end
   end
 
@@ -36,7 +36,7 @@ describe Organization do
       number = rand(10)
       (number*2).times { FactoryGirl.create(:organization) }
 
-      Organization.get_random_list(number).count.should == number
+      expect(Organization.get_random_list(number).count).to eq(number)
     end
   end
 end

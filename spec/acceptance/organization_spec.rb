@@ -12,11 +12,11 @@ describe 'Submitting organization' do
       expected_error_messages = ["Name", "Contact", "City", "Country", "Password", "Announcer", "Email"].collect {|field| "#{field} can't be blank"}
       displayed_errors_messages = all(:xpath, "//div[@id='errorExplanation']/ul/li").collect {|field| field.text }
 
-      displayed_errors_messages.sort.should == expected_error_messages.sort
+      expect(displayed_errors_messages.sort).to eq(expected_error_messages.sort)
     end
 
     it 'should not show success message' do
-      page.should_not have_xpath "//h4[@class='successfulUpdated']"
+      expect(page).not_to have_xpath("//h4[@class='successfulUpdated']")
     end
   end
 
@@ -34,15 +34,15 @@ describe 'Submitting organization' do
     end
 
     it 'should preserver input when organization is not valid' do
-      find(:xpath, "//input[@name='organization[name]']").value.should == 'Casa da Mae Joana'
+      expect(find(:xpath, "//input[@name='organization[name]']").value).to eq('Casa da Mae Joana')
     end
 
     it 'should tell invalid field' do
-      find(:xpath, "//div[@id='errorExplanation']/ul/li").text.should =~ /Email(.*)invalid/
+      expect(find(:xpath, "//div[@id='errorExplanation']/ul/li").text).to match(/Email(.*)invalid/)
     end
 
     it 'should not show success message' do
-      page.should_not have_xpath "//h4[@class='successfulUpdated']"
+      expect(page).not_to have_xpath("//h4[@class='successfulUpdated']")
     end
   end
 
@@ -55,7 +55,7 @@ describe 'Submitting organization' do
     fill_in 'organization[password]', :with => 'password'
     fill_in 'organization[email]', :with => 'a@a.com'
     click_button 'organization_submit'
-    page.should have_xpath "//h4[@class='successfulUpdated']"
+    expect(page).to have_xpath("//h4[@class='successfulUpdated']")
   end
 
 end
@@ -79,18 +79,18 @@ describe 'Editing organization' do
   it 'should validate wrong password' do
     fill_in 'pass_field', :with => 'XXX'
     click_button 'Validate'
-    has_content? 'Invalid password'
+    expect(has_content? 'Invalid password').to be_truthy
   end
 
   it 'should validate empty password' do
     click_button 'Validate'
-    has_content? 'Invalid password'
+    expect(has_content? 'Invalid password').to be_truthy
   end
 
   it 'should validate correct password' do
     fill_in 'pass_field', :with => 'senha'
     click_button 'Validate'
-    has_content? 'Casa da Mae Joana'
+    expect(has_content? 'Casa da Mae Joana').to be_truthy
   end
 
   it 'should edit organization' do
@@ -100,7 +100,7 @@ describe 'Editing organization' do
     find_field 'organization[city]'
     fill_in 'organization[password]', :with => 'password'
     click_button 'organization_submit'
-    page.should have_xpath "//h4[@class='successfulUpdated']"
+    expect(page).to have_xpath("//h4[@class='successfulUpdated']")
   end
 
 end

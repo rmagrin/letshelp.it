@@ -6,46 +6,46 @@ describe OrganizationsController, :type => :controller do
 
   it 'should have an index page' do
     get :index
-    response.should be_success
-    response.should render_template :index
-    request.flash.should be_empty
+    expect(response).to be_success
+    expect(response).to render_template(:index)
+    expect(request.flash).to be_empty
   end
 
   it 'should have a new page' do
     get :new
-    response.should be_success
+    expect(response).to be_success
   end
 
   it 'should create an organization' do
     expect {post :create, :organization => FactoryGirl.attributes_for(:organization)}.to change(Organization, :count).by(1)
-    response.should redirect_to(Organization.last)
+    expect(response).to redirect_to(Organization.last)
   end
   context 'when manipulating organizations' do
     let(:organization) { FactoryGirl.create(:organization)}
 
     it 'should show an organization' do
       get :show, :id => organization
-      response.should be_success
+      expect(response).to be_success
     end
 
     it 'should be able to edit an organization' do
       get :edit, :id => organization
-      response.should be_success
+      expect(response).to be_success
     end
 
     it 'should be able to successfully update an organization' do
       put :update, :id => organization, :organization => {:name => "EvilOrganization"}
-      response.should be_redirect
+      expect(response).to be_redirect
     end
 
     it 'should be able to successfully delete an organization' do
       delete :destroy, :id => organization
-      response.should redirect_to(organizations_path)
+      expect(response).to redirect_to(organizations_path)
     end
 
     it 'should show tags when there is a validation error while creating an organization' do
       put :create, :organization => {}
-      response.should be_success
+      expect(response).to be_success
     end
   end
 
@@ -54,39 +54,39 @@ describe OrganizationsController, :type => :controller do
 
     it 'should return organizations based on its name' do
       get :search, :q => organization.name
-      assigns(:organizations).should include(organization)
+      expect(assigns(:organizations)).to include(organization)
     end
 
     it 'should return organizations based on its city' do
       get :search, :q => organization.city
-      assigns(:organizations).should include(organization)
+      expect(assigns(:organizations)).to include(organization)
     end
 
     it 'should return organizations based on tags' do
       tag = FactoryGirl.create(:tag)
       organization.tags << tag
       get :search, :tag_ids => [tag]
-      assigns(:organizations).should include(organization)
+      expect(assigns(:organizations)).to include(organization)
     end
 
     it 'should not return an organization without the tag being searched' do
       tag = FactoryGirl.create(:tag)
       get :search, :tag_ids => [tag]
-      assigns(:organizations).should_not include(organization)
+      expect(assigns(:organizations)).not_to include(organization)
     end
 
     it 'should be able to find organizations based on cities with/without accents' do
       organization.city = 'São Paulo'
       organization.save!
       get :search, :q => 'sao paulo'
-      assigns(:organizations).should include(organization)
+      expect(assigns(:organizations)).to include(organization)
       get :search, :q => 'são paulo'
-      assigns(:organizations).should include(organization)
+      expect(assigns(:organizations)).to include(organization)
     end
 
     it 'should not allow SQL injections' do
       get :search, :q => "' or '1=1"
-      assigns(:organizations).should be_empty
+      expect(assigns(:organizations)).to be_empty
     end
   end
 end
