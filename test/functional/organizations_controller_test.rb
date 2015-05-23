@@ -9,7 +9,7 @@ class OrganizationsControllerTest < ActionController::TestCase
     should respond_with :success
     should assign_to :organizations
     should render_template :index
-    should_not set_the_flash
+    should_not set_flash
   end
 
   should "get new" do
