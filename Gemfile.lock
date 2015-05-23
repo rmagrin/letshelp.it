@@ -54,7 +54,7 @@ GEM
     headless (2.1.0)
     i18n (0.7.0)
     json (1.8.2)
-    kgio (2.9.2)
+    kgio (2.9.3)
     mail (2.6.3)
       mime-types (>= 1.16, < 3)
     mime-types (2.5)
@@ -135,7 +135,7 @@ GEM
     truncate_html (0.9.3)
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
-    unicorn (4.8.3)
+    unicorn (4.9.0)
       kgio (~> 2.6)
       rack
       raindrops (~> 0.7)
