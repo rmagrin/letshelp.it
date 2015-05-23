@@ -2,7 +2,7 @@ source 'http://rubygems.org'
 ruby '2.1.2'
 
 gem 'rake', '~> 10.4.2'
-gem 'rails', '4.1.10'
+gem 'rails', '4.2.1'
 gem 'babosa', '~> 1.0.2'
 gem 'friendly_id', '~> 5.1.0'
 gem 'dynamic_form', '~> 1.1.4'
@@ -18,6 +18,7 @@ end
 group :development, :test do
   gem 'sqlite3', '~> 1.3.10'
   gem 'rspec-rails', '~> 3.2.1'
+  gem 'web-console', '~> 2.0'
 end
 
 group :test do
