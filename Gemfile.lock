@@ -29,7 +29,7 @@ GEM
       thread_safe (~> 0.1)
       tzinfo (~> 1.1)
     arel (5.0.1.20140414130214)
-    babosa (0.3.11)
+    babosa (1.0.2)
     builder (3.2.2)
     capybara (2.4.4)
       mime-types (>= 1.16)
@@ -148,7 +148,7 @@ PLATFORMS
 
 DEPENDENCIES
   RedCloth (~> 4.2.9)
-  babosa (~> 0.3.11)
+  babosa (~> 1.0.2)
   capybara
   dynamic_form (~> 1.1.4)
   factory_girl (~> 4.5.0)
