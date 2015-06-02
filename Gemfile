@@ -24,7 +24,7 @@ end
 group :test do
   gem 'shoulda', '~> 3.5.0', require: false
   gem 'shoulda-kept-assign-to', '~> 1.0.1', require: false
-  gem 'test-unit', '~> 3.0.9'
+  gem 'test-unit', '~> 3.1.1'
   gem 'factory_girl', '~> 4.5.0'
   gem 'factory_girl_rails', '~> 4.5.0'
   gem 'selenium-webdriver', '~> 2.45.0'
