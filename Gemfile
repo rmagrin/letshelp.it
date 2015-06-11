@@ -17,7 +17,7 @@ end
 
 group :development, :test do
   gem 'sqlite3', '~> 1.3.10'
-  gem 'rspec-rails', '~> 3.2.1'
+  gem 'rspec-rails', '~> 3.2.3'
   gem 'web-console', '~> 2.0'
 end
 
@@ -27,7 +27,7 @@ group :test do
   gem 'test-unit', '~> 3.1.1'
   gem 'factory_girl', '~> 4.5.0'
   gem 'factory_girl_rails', '~> 4.5.0'
-  gem 'selenium-webdriver', '~> 2.45.0'
+  gem 'selenium-webdriver', '~> 2.46.2'
   gem 'headless', '~> 2.1.0'
   gem 'capybara', '~> 2.4.4'
   gem 'forgery', '~> 0.6.0'
