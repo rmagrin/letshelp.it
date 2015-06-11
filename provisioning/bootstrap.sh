@@ -27,7 +27,7 @@ function install_requirements {
 
 function install_ruby {
   echo "Installing ruby..."
-  apt-get install -y ruby2.1 ruby2.1-dev
+  apt-get install -y ruby2.2 ruby2.2-dev
   gem install bundler
   echo "Done installing ruby."
 }
