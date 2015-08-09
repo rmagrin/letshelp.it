@@ -28,7 +28,7 @@ group :test do
   gem 'factory_girl', '~> 4.5.0'
   gem 'factory_girl_rails', '~> 4.5.0'
   gem 'selenium-webdriver', '~> 2.47.1'
-  gem 'headless', '~> 2.1.0'
+  gem 'headless', '~> 2.2.0'
   gem 'capybara', '~> 2.4.4'
   gem 'forgery', '~> 0.6.0'
 end
