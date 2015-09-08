@@ -11,7 +11,7 @@ gem 'truncate_html', '~> 0.9.2'
 gem 'unicorn', '~> 4.9.0'
 
 group :production do
-  gem 'pg', '~> 0.18.2'
+  gem 'pg', '~> 0.18.3'
   gem 'rails_12factor', '~> 0.0.3'
 end
 
