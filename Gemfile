@@ -1,7 +1,7 @@
 source 'http://rubygems.org'
 ruby '2.2.2'
 
-gem 'rake', '~> 10.4.2'
+gem 'rake', '~> 12.3.3'
 gem 'rails', '4.2.3'
 gem 'babosa', '~> 1.0.2'
 gem 'friendly_id', '~> 5.1.0'
